@@ -330,7 +330,11 @@
 #endif
 #define	CFG_HZ	bd->bi_cfg_hz
 
-#define CONFIG_QCA_PLL 		QCA_PLL_PRESET_400_400_200
+#ifdef CONFIG_FOR_MAP2N
+    #define CONFIG_QCA_PLL 		QCA_PLL_PRESET_200_200_200
+#else
+    #define CONFIG_QCA_PLL 		QCA_PLL_PRESET_400_400_200
+#endif
 
 
 /*
